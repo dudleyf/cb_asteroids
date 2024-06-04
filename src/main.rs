@@ -1,4 +1,4 @@
-use bevy::prelude::*;
+use bevy::{asset::AssetMetaCheck, prelude::*};
 use bevy_xpbd_2d::plugins::{PhysicsDebugPlugin, PhysicsPlugins};
 use cb_asteroids::{
     assets::AssetsPlugin,
@@ -19,6 +19,7 @@ use cb_asteroids::{
 fn main() {
     App::new()
         .insert_resource(ClearColor(Color::rgb(0.0, 0.0, 0.1)))
+        .insert_resource(AssetMetaCheck::Never) // https://github.com/bevyengine/bevy/issues/10157
         .add_plugins((
             DefaultPlugins.set(WindowPlugin {
                 primary_window: Some(Window {
