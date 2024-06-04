@@ -1,0 +1,11 @@
+[package]
+name = "cb_asteroids"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.13.2"
+bevy_asset_loader = { version = "0.20.2", features = ["2d"] }
+bevy_xpbd_2d = { version = "0.4.2", features = ["debug-plugin"] }
+rand = "0.8.5"
+roxmltree = "0.20.0"
